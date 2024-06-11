@@ -1,0 +1,88 @@
+.edit {
+    background-color: #404040;
+    color: #f1f1f1;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.edit h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.edit h2{
+    color: #ffffff;
+}
+
+.edit form {
+    max-width: 600px;
+    margin:20px auto;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-control, .ingreds li{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #3e3e3e;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f1f1f1;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #e91e63;
+    box-shadow: 0 0 5px rgba(233, 30, 99, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #e91e63;
+    color: #f1f1f1;
+}
+
+.btn-primary:hover {
+    background-color: #d81b60;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    color: #f1f1f1;
+}
+
+.btn-danger:hover {
+    background-color: #e53935;
+}
+
+
+#ingreds {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ingreds li {
+    padding: 10px;
+    background-color: #2e2e2e;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#ingreds li:nth-child(odd) {
+    background-color: #3e3e3e;
+}

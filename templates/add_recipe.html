@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Add recipe{% endblock %}
+
+{% block content %}
+<script>
+    let ingredientCount = 1;
+
+    function addIngredient() {
+        const ingredientsDiv = document.getElementById('ingredients');
+        const newIngredient = document.createElement('div');
+        newIngredient.innerHTML = `
+            <select name="list_of_products_${ingredientCount}">
+                {% for product in list_of_products %}
+                    <option value="{{ product }}">{{ product }}</option>
+                {% endfor %}
+            </select>
+            <input type="text" name="quantities_${ingredientCount}" placeholder="Quantity">
+        `;
+        ingredientsDiv.appendChild(newIngredient);
+        ingredientCount++;
+    }
+</script>
+
+<form method="POST" action="{{ url_for('add_recipe') }}" class="margin-and-background">
+    {{ form.hidden_tag() }}
+    <section id="top-recipe">
+        <div>
+            <div>
+                <h2>{{ form.name.label }}</h2>
+                    <div>
+                        {{ form.name }}
+                        {% for error in form.name.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                <h2>{{ form.description.label }}</h2>
+                <p>{{ form.description }}
+                    {% for error in form.description.errors %}
+                        <span style="color: red;">{{ error }}</span>
+                    {% endfor %}
+                </p>
+            </div>
+            <div id="prep-content">   
+                <div>
+                    <h3>Preparation time</h3>
+                    <p>
+                        {{ form.prep_time }} <span>mins</span>
+                        {% for error in form.prep_time.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class= "vertical"></div>
+                <div>
+                    <h3>Cook time</h3>
+                    <p>{{ form.cook_time }} <span>mins</span>
+                        {% for error in form.cook_time.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class= "vertical"></div>
+                <div>
+                    <h3>Servings</h3>
+                    <p> {{ form.servings }}
+                        {% for error in form.servings.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>    
+        </div>
+    </section>
+    
+    <section id="recipe">
+        <ul>
+            <h3>Ingredients</h3>
+            <div id="ingredients">
+                <select name= "list_of_products_0">
+                    {% for product in list_of_products %}
+                        <option value= "{{ product }}">{{product}}</option>"
+                    {% endfor %}
+                </select>
+                <input type="text" name="quantities_0" placeholder="Quantity">
+            </div>
+            <button type="button" onclick="addIngredient()">Add Ingredient</button>
+        </ul>
+    </section>
+
+    <section id="preparation">
+        <ol>
+            <h3>Instructions</h3>
+            <div>
+                {{ form.instructions }}
+                {% for error in form.instructions.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </ol>
+    </section>
+    <div id="nutrifacts">
+        <h3>Total Nutrition Facts</h3>
+        <p>Energy: {{ total_nutrition['Calories'] }} kcal</p>
+        <p>Protein: {{ total_nutrition['Protein'] }} g</p>
+        <p>Carbohydrate: {{ total_nutrition['Carbohydrate'] }} g</p>
+        <p>Fat: {{ total_nutrition['Fat'] }} g</p>
+    </div>
+    <div>
+        {{ form.submit (id="submit")}}
+    </div>
+</form>
+{% endblock %}
+

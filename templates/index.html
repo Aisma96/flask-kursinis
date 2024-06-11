@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block content %}
+    </header>
+    <section class="background-image">
+        <section id="introduction">
+            <img src="static/images/myimg/received_209728380329046.jpeg">
+            <h4>Hello and thanks for visiting my page! My name is Aistė. I am currently studying Python programing language. Just learned how to create my very first web page, hope you like it! &#128522; </h4>
+        </section>
+
+    <section id="selections">
+            <h2 id="im-craving">I'm craving...</h2>
+
+        <nav id="selectiontags">
+            <ul>
+                <li>
+                    <a href="#Breakfast" >
+                    <img  src="static/images/selections-img/smoothie-bowl-3a8632c.jpg" alt="Breakfast">
+                    <h3>Breakfast</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Lunch/Dinner" >
+                        <img  src="static/images/selections-img/dinner.jpg" alt="Lunch/Dinner">
+                        <h3>Lunch/Dinner</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Snacks" >
+                        <img  src="static/images/selections-img/superfood-bites_0_0-bca6e3106e9c4f4ab59ab3f61964e155.jpg" alt="Snacks">
+                        <h3>Snacks</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Desserts" >
+                        <img  src="static/images/selections-img/Gluten-Free-Muffins.webp" alt="Dessert">
+                        <h3>Desserts</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Beverages">
+                        <img  src="static/images/selections-img/images.jpg" alt="Beverages">
+                        <h3>Beverages</h3>
+                    </a>
+                </li>
+            </ul>
+        </nav>    
+    </section>
+    
+        <section id="breakfast-content">
+            <h1 id="Breakfast">Breakfast</h1>
+
+            <ul>
+                <li>
+                    <a href="{{url_for('pudding')}}">
+                        <img src="static/images/breakfast/Chia-and-Flaxseed-Pudding-1024x1536.webp" alt="Chia And Flaxseed Pudding">
+                        <p>Chia And Flaxseed Pudding</p>
+                    </a>  
+                </li>
+                <li>
+                    <a href="{{url_for('pancakes')}}">
+                        <img src="static/images/breakfast/cottage-cheese-oatmeal-pancakes-1024x1536.webp" alt="Cottage Cheese Oatmeal Pancakes">
+                        <p >Cottage Cheese Oatmeal Pancakes</p> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('overnignt_oats')}}">
+                        <img src="static/images/overnight-oats/overnight-oats-cinnamon-roll.webp" alt="Overnignt Oats">
+                        <p>Overnignt Oats</p> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('blueberry')}}">
+                        <img src="static/images/breakfast/Baked-Lemon-Blueberry-Doughnuts-1024x1536.webp" alt="Baked Lemon Blueberry Donuts">
+                        <p>Baked Lemon Blueberry Donuts</p>
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+        <hr class="separator">
+
+        <section id="lunch-content">
+            <h1 id="Lunch/Dinner">Lunch/Dinner</h1>
+            <ul>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/lunch/red-argentine-shrimp-recipe-720x1080.webp" alt="Red Agnetine Shrimp">
+                        <p >Red Agnetine Shrimp</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/lunch/chicken-sausage-in-air-fryer-720x1080.webp" alt="Chicken Sausages">
+                        <p >Chicken Sausages</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/lunch/Salmon-sushi-cups-720x1080.jpg" alt="Salmon Sushi">
+                        <p >Salmon Sushi</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/lunch/egg-roll-in-a-bowl-recipe-720x1080.webp" alt="Egg Roll In Bowl">
+                        <p >Egg Roll In Bowl</p>
+                    </a>
+                </li>
+            </ul>   
+
+        </section>
+        <hr class="separator">
+        <section id="snacks-content">
+            <h1 id="Snacks">Snacks</h1> 
+            <ul>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/snaks/mango-corn-salsa-1024x1536.jpg" alt="Mango Salsa">
+                        <p >Mango Salsa</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/snaks/Roasted-Chili-Lime-Cashews-1-1024x1536.jpg" alt="Roasted Chili Cashews">
+                        <p >Roasted Chili Cashews</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/snaks/Turkey-Sweet-Potato-Sliders-Paleo-1024x1536.jpg" alt="Sweet Potato">
+                        <p >Sweet Potato</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/snaks/Cucumber-Bites-Appetizer-Recipe-1024x1536.webp" alt="Cucumber Bites">
+                        <p >Cucumber Bites</p>
+                    </a>
+                </li>
+            </ul>      
+        </section>
+        <hr class="separator">
+        <section id="deserts-content">
+            <h1 id="Desserts">Desserts</h1> 
+            <ul>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/desserts/Healthy-Peanut-Butter-Balls-1.webp" alt="Healthy Peanut Butter Balls">
+                        <p >Healthy Peanut Butter Balls</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/desserts/gluten-free-lemon-drizzle-cake-1.webp" alt="Gluten Free Lemon Loaf">
+                        <p >Gluten Free Lemon Loaf</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/desserts/gluten-free-funfetti-cookies.jpg" alt="Gluten Free Funfetti Cookies">
+                        <p >Gluten Free Funfetti Cookies</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/desserts/Oat-flour-brownies..jpg" alt="Oat Flour Brownies">
+                        <p >Oat Flour Brownies</p>
+                    </a>
+                </li>
+            </ul>      
+        </section>
+        <hr class="separator">
+        <section id="drinks-content">
+            <h1 id="Beverages">Beverages</h1> 
+            <ul>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/beverages/cranberry-gin-cocktail.webp" alt="Cranberry Gin Cocktail">
+                        <p >Cranberry Gin Cocktail</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/beverages/Fall-Margarita-Recipe.webp" alt="Fall Margarita">
+                        <p >Fall Margarita</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/beverages/Fig-Jam-Whiskey-Cocktail-1.jpg" alt="Fig Jam Whiskey">
+                        <p>Fig Jam Whiskey</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('unfinished_recipes')}}">
+                        <img  src="static/images/beverages/spiced-orange-gin-spritz-35-scaled.jpg" alt="Spiced Orange Gin Spritz">
+                        <p>Spiced Orange Gin Spritz</p>
+                    </a>
+                </li>
+            </ul>      
+        </section>
+
+
+        <section id="button">
+            <button>
+                <a href="#im-craving">&#8593; Back to top</a>
+            </button>
+        </section>
+    </section>
+
+</body>
+</html>
+
+{% endblock %}

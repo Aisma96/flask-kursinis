@@ -1,0 +1,44 @@
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+#menu ul li {
+    margin: 0 15px;
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+#menu ul li a:hover {
+    color: #ffa500; /* Change to your preferred hover color */
+}
+
+@media (max-width: 768px) {
+    #menu ul {
+        flex-direction: column;
+        margin: 10px 0 0 0;
+    }
+    
+    #menu ul li {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="view-recipe">
+    <section id="top-recipe">
+        <div>
+            <div>
+                <h2>{{ recipe.name }}</h2>
+                <p>{{ recipe.description }}</p>
+            </div>
+            <div id="prep-content">
+                <div>
+                    <h3>Preparation time</h3>
+                    <p>{{ recipe.prep_time }} min</p>
+                </div>
+                <div class="vertical"></div>
+                <div>
+                    <h3>Cook time</h3>
+                    <p>{{ recipe.cook_time }} min</p>
+                </div>
+                <div class="vertical"></div>
+                <div>
+                    <h3>Servings</h3>
+                    <p>{{ recipe.servings }} people</p>
+                </div>
+            </div>
+        </div>
+        <section>
+            <img src="{{ url_for('static', filename='images/breakfast/Baked-Lemon-Blueberry-Doughnuts-1024x1536.webp') }}" alt="Chia And Flaxseed Pudding">
+        </section>
+    </section>
+    
+    <section id="recipe">
+        <ul>
+            <h3>Ingredients</h3>
+            {% for ingredient in ingredients %}
+                <li>{{ ingredient.ingredients }} - {{ ingredient.quantities }} <span>g</span></li>
+            {% endfor %}
+        </ul>
+        <div>
+            <img src="{{ url_for('static', filename='images/blueberry-donuts/Baked-Lemon-Blueberry-Donuts.webp') }}" alt="">
+        </div>
+    </section>
+
+    <section id="preparation">
+        <ol>
+            <h3>Instructions</h3>
+            {{ recipe.instructions }}
+        </ol>
+        <div>
+            <img src="{{ url_for('static', filename='images/blueberry-donuts/Healthy-Baked-Lemon-Blueberry-Donuts.webp') }}" alt="">
+        </div>
+    </section>
+</div>
+{% endblock %}
